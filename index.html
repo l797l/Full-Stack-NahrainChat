@@ -125,7 +125,7 @@
 
     <script>
       const connection = new signalR.HubConnectionBuilder()
-        .withUrl("http:/nahrainchat.runasp.net//chatHub") 
+        .withUrl("http://nahrainchat.runasp.net//chatHub") 
         .withAutomaticReconnect()
         .build();
 
@@ -153,7 +153,7 @@
       async function loadOldMessages() {
         try {
           const response = await fetch(
-            "http:/nahrainchat.runasp.net/api/Message/AllMessages",
+            "http://nahrainchat.runasp.net/api/Message/AllMessages",
           );
           if (response.ok) {
             const messages = await response.json();
@@ -177,7 +177,7 @@
 
         try {
           const response = await fetch(
-            "http:/nahrainchat.runasp.net/api/Message/SendMessage",
+            "http://nahrainchat.runasp.net/api/Message/SendMessage",
             {
               method: "POST",
               headers: { "Content-Type": "application/json" },
@@ -202,5 +202,6 @@
     </script>
   </body>
 </html>
+
 
 
